@@ -48,6 +48,7 @@ function randomIndex(arrayName) {
 }
 
 document.querySelector('button').addEventListener("click", function () {
+    document.querySelector('.container').style.display = 'block';
     document.getElementById('story').innerText += userName.value + " et " + randomIndex(name) + " sont allés "
     + randomIndex(places) + " pour " + randomIndex(verbs) + " avec " + randomIndex(objects) + " alors qu'il faisaient "
     + randomIndex(temperatures) + "." + '\n';
