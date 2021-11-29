@@ -1,4 +1,4 @@
-const userName = document.querySelector("input[type='text']");
+let userName = document.querySelector("input[type='text']");
 
 let name = [
     "Erwin",
@@ -48,6 +48,9 @@ function randomIndex(arrayName) {
 }
 
 document.querySelector('button').addEventListener("click", function () {
+    if (userName.value.length === 0) {
+        userName.value = 'Vous';
+    }
     document.querySelector('.container').style.display = 'block';
     document.getElementById('story').innerText += userName.value + " et " + randomIndex(name) + " sont allés "
     + randomIndex(places) + " pour " + randomIndex(verbs) + " avec " + randomIndex(objects) + " alors qu'il faisaient "
